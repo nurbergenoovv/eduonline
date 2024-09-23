@@ -3,6 +3,7 @@ import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import courses from "@/lib/courses"
 import { CheckCircle, PlayCircle, FileText } from "lucide-react"
+import Image from "next/image"
 
 export default function CoursePage({ params }: { params: { id: string } }) {
 
@@ -64,11 +65,13 @@ export default function CoursePage({ params }: { params: { id: string } }) {
         </TabsContent>
         <TabsContent value="instructor">
           <div className="flex items-start space-x-4">
-            <img
+            <Image
               src={course.instructor.photo}
               alt={course.instructor.name}
               className="w-24 h-24 rounded-full object-cover"
-            />a
+              width={100}
+              height={100}
+            />
             <div>
               <h3 className="text-xl font-semibold mb-2">{course.instructor.name}</h3>
               <p className="text-muted-foreground">

@@ -26,29 +26,29 @@ export function Page() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input 
-                id="email" 
-                type="email" 
-                value={email} 
+              <Input
+                id="email"
+                type="email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required 
+                required
               />
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
-              <Input 
-                id="password" 
-                type="password" 
-                value={password} 
+              <Input
+                id="password"
+                type="password"
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                required 
+                required
               />
             </div>
             <Button type="submit" className="w-full">Log In</Button>
           </form>
         </CardContent>
         <CardFooter className="flex justify-center">
-          <p>Don't have an account? <a href="/signup" className="text-primary hover:underline">Sign up</a></p>
+          <p>Don&apos;t have an account? <a href="/signup" className="text-primary hover:underline">Sign up</a></p>
         </CardFooter>
       </Card>
     </div>
