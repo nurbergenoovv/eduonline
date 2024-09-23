@@ -1,8 +1,10 @@
+'use client'
+
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import courses from '@/lib/courses'
 
-export default function Home() {
+export function Page() {
   return (
     <div className="space-y-12">
       <section className="text-center">
@@ -35,7 +37,7 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-4">Готовы начать обучение?</h2>
         <p className="mb-6">Присоединяйтесь к тысячам студентов, которые уже учатся на EduOnline</p>
         <Button size="lg" variant="secondary" asChild>
-          <Link href="/signup">Зарегистрироваться сейчас</Link>
+          <Link href="/signup">Зарегистрироваться</Link>
         </Button>
       </section>
     </div>
